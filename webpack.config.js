@@ -26,7 +26,7 @@ let cssConfig = {
   use: ['css-loader?url=false', {loader: 'postcss-loader', options: {plugins: postCSSPlugins}}]
 };
 
-// Define plugin to rename html files without chunkHash portion
+// Define plugin for build task to rename html files without chunkHash portion
 let pages = fse.readdirSync('./app')
   .filter(file => {
     return file.endsWith('.html');
@@ -37,6 +37,15 @@ let pages = fse.readdirSync('./app')
       template: `./app/${page}`
     });
   });
+
+// Copy the image files to dist during build task
+class RunAfterCompile {
+  apply(compiler) {
+    compiler.hooks.done.tap('Copy images', () => {
+      fse.copySync('./app/assets/images', './docs/assets/images');
+    })
+  };
+}
 
 // create generic webpack config object
 let config = {

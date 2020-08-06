@@ -1,8 +1,13 @@
 body {
   font-family: 'Rowdies', cursive;
-  /* color: #333; */
+  color: white;
+  background: no-repeat url('./assets/img/microphone-bg.jpg');
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 300;
 }

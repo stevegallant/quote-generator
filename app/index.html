@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>And I Quote</title>
+    <title>And I Quote...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8">
     <meta name="keywords" content="famous quotes, javascript">
@@ -9,18 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>And I Quote</h1>
-    <div id="quote-box" class="quote-box">
-      <div id="text">
-        <p>To be or not to be...</p>
+    <!-- <span>Photo by <a href="https://unsplash.com/@mattbotsford?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Matt Botsford</a> on <a href="https://unsplash.com/s/photos/microphone?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> -->
+    <div class="wrapper">
+      <h1 class="appTitle">And I Quote...</h1>
+      
+      <div id="quote-box" class="quote-box">
+        <div id="text" class="quote-box__quoteText">
+          <p>To be or not to be...</p>
+        </div>
+        <div id="author" class="quote-box__author">
+          - some mad dane
+        </div>
+        <a id="new-quote" class="btn" href="#">Next Quote</a>
+        <a href="#" id="tweet-quote" class="btn"></a>
       </div>
-      <div id="author">
-        - some mad dutchman
-      </div>
-      <a id="new-quote" href="#"></a>
-      <a href="#" id="tweet-quote" class="btn"></a>
-
     </div>
+
     <script src="bundled.js"></script>
   </body>
 </html>
