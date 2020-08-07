@@ -1,13 +1,27 @@
 .quote-box {
   margin: 0 auto;
   padding: 10px 20px;
-  border: 3px solid black;
+  border: 3px solid silver;
+  border-radius: 4px;
+  box-shadow: -4px 4px 4px $mainDkPurple;
+
+  @mixin clearfix;
 
   &__quoteText {
-    
+
+    @mixin atMedium {
+      font-size: 1.5rem;
+    }
+
   }
 
   &__author {
+    margin-bottom: 2.5rem;
     text-align: right;
+    color: $mainSilver;
+
+    @mixin atMedium {
+      margin-bottom: 1.5rem;
+    }
   }
 }

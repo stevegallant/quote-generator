@@ -4,7 +4,7 @@
   padding-right: 24px;
   max-width: 600px;
 
-  @mixin atLarge {
-    margin-left: 10%;
+  @mixin atMedium {
+    margin-left: 80px;
   }
 }

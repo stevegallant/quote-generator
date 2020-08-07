@@ -6,13 +6,14 @@
     <meta charset="utf-8">
     <meta name="keywords" content="famous quotes, javascript">
     <meta name="description" content="Random generator of inspiring famous quotes.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- <span>Photo by <a href="https://unsplash.com/@mattbotsford?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Matt Botsford</a> on <a href="https://unsplash.com/s/photos/microphone?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> -->
     <div class="wrapper">
       <h1 class="appTitle">And I Quote...</h1>
-      
+
       <div id="quote-box" class="quote-box">
         <div id="text" class="quote-box__quoteText">
           <p>To be or not to be...</p>
@@ -20,8 +21,9 @@
         <div id="author" class="quote-box__author">
           - some mad dane
         </div>
-        <a id="new-quote" class="btn" href="#">Next Quote</a>
-        <a href="#" id="tweet-quote" class="btn"></a>
+        <a href="#" id="tweet-quote" class="btn btn__twitter" title="Tweet this quote"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a id="new-quote" class="btn btn__next-quote" href="#">Next Quote</a>
+
       </div>
     </div>
 

@@ -1,3 +1,21 @@
 .btn {
-  
+  display: inline-block;
+  padding: .75rem 1.2rem;
+  border-radius: 4px;
+  background-color: $mainSilver;
+  color: $mainDkPurple;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &__next-quote {
+    float: right;
+  }
+
+  &__twitter {
+    padding: .4rem 1rem;
+    font-size: 1.5rem;
+  }
 }
