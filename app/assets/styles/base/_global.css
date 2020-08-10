@@ -2,6 +2,8 @@ body {
   font-family: 'Rowdies', cursive;
   color: white;
   background: no-repeat url('./assets/img/microphone-bg.jpg');
+  background-size: cover;
+  /* background-attachment: fixed;   */
 }
 
 * {
