@@ -110,6 +110,8 @@ if (currentTask == 'build') {
     new CleanWebpackPlugin(),
     // break out css from bundle
     new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
+
+    new RunAfterCompile();
   ];
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
