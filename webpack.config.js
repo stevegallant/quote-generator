@@ -50,6 +50,7 @@ class RunAfterCompile {
 // create generic webpack config object
 let config = {
   entry: './app/assets/scripts/App.js',
+  plugins: pages,
   module: {
     rules: [
       cssConfig,
@@ -105,14 +106,14 @@ if (currentTask == 'build') {
     path: path.resolve(__dirname, 'docs')
   };
 
-  config.plugins = [
+  config.plugins.push(
     // clean up dist before outputting new copies of chunk files
     new CleanWebpackPlugin(),
     // break out css from bundle
     new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
 
-    new RunAfterCompile();
-  ];
+    // new RunAfterCompile()
+  );
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
 
