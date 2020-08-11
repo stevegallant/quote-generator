@@ -3,8 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import quotations from './modules/_quotations';
 
-let tweetURL;
-
 class QuoteBox extends React.Component {
   constructor(props) {
     super(props);
@@ -22,11 +20,11 @@ class QuoteBox extends React.Component {
       quoteText: randomQuote.content,
       attribution: randomQuote.attribution
     });
-    // tweetURL = 'https://twitter.com/intent/tweet?text=%22' + this.state.quoteText + '%22%20%20-%20' + this.state.attribution;
-    tweetURL = "https://twitter.com/intent/tweet?text=hello";
   }
 
   render() {
+    let tweetURL = "https://twitter.com/intent/tweet?text=%22" + this.state.quoteText + "%22  -- " + this.state.attribution;
+
     return (
       <div id="quote-box" className="quote-box">
         <div id="text" className="quote-box__quoteText">
@@ -35,9 +33,8 @@ class QuoteBox extends React.Component {
         <div id="author" className="quote-box__author">
           {'- ' + this.state.attribution}
         </div>
-        <a href={"https://twitter.com/intent/tweet?text=%22" + this.state.quoteText + "%22%20--%20" + this.state.attribution} id="tweet-quote" className="btn btn__twitter" title="Tweet this quote" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href={tweetURL} id="tweet-quote" className="btn btn__twitter" title="Tweet this quote" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
         <a id="new-quote" className="btn btn__next-quote" href="#" onClick={this.handleClick}>Next Quote</a>
-
       </div>
     );
   }

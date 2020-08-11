@@ -1,5 +1,5 @@
 .quote-box {
-  min-width: 256px;
+  width: 256px;
   margin: 0 auto;
   padding: 10px 20px;
   border: 3px solid silver;
@@ -8,13 +8,24 @@
 
   @mixin clearfix;
 
+  @mixin atSmall {
+    margin-left: 0px;
+  }
+
+  @mixin atMedium {
+    width: 300px;
+  }
+
+  @mixin atLarge {
+    width: 500px;
+  }
+
   &__quoteText {
     color: $mainLtPurple;
 
     @mixin atMedium {
       font-size: 1.5rem;
     }
-
   }
 
   &__author {
