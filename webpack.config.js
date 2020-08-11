@@ -42,7 +42,7 @@ let pages = fse.readdirSync('./app')
 class RunAfterCompile {
   apply(compiler) {
     compiler.hooks.done.tap('Copy images', () => {
-      fse.copySync('./app/assets/images', './docs/assets/images');
+      fse.copySync('./app/assets/img', './docs/assets/img');
     })
   };
 }
@@ -112,7 +112,7 @@ if (currentTask == 'build') {
     // break out css from bundle
     new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
 
-    // new RunAfterCompile()
+    new RunAfterCompile()
   );
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
