@@ -2,7 +2,7 @@
 
 const quotations = [
   {attribution: "Homer Simpson", content: "Doh!"},
-  {attribution: "John MacLane", content: "Yippee-ki-yay, motherfucker!"},
+  {attribution: "Evel Knievel", content: "I'm not a jack of all trades; I'm a master of many. I don't feel there is anything I can't do if I want to."},
   {attribution: "Bruce Lee", content: "The successful warrior is the average man, with laser-like focus."},
   {attribution: "Steve Jobs", content: "Stay hungry, stay foolish."},
   {attribution: "Malcolm X", content: "The future belongs to those who prepare for it today."},

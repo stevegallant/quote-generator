@@ -33,8 +33,10 @@ class QuoteBox extends React.Component {
         <div id="author" className="quote-box__author">
           {'- ' + this.state.attribution}
         </div>
-        <a href={tweetURL} id="tweet-quote" className="btn btn__twitter" title="Tweet this quote" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-        <a id="new-quote" className="btn btn__next-quote" href="#" onClick={this.handleClick}>Next Quote</a>
+        <div className="quote-box__buttons">
+          <a href={tweetURL} id="tweet-quote" className="btn btn__twitter" title="Tweet this quote" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+          <a id="new-quote" className="btn btn__next-quote" href="#" onClick={this.handleClick}>Next Quote</a>
+        </div>
       </div>
     );
   }

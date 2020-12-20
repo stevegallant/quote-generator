@@ -1,10 +1,14 @@
 .quote-box {
+  position: relative;
   width: 256px;
+  height: 350px;
   margin: 0 auto;
   padding: 10px 20px;
   border: 3px solid silver;
   border-radius: 4px;
+  backdrop-filter: blur(3px);
   box-shadow: -4px 4px 4px $mainDkPurple;
+  
 
   @mixin clearfix;
 
@@ -14,10 +18,12 @@
 
   @mixin atMedium {
     width: 300px;
+
   }
 
   @mixin atLarge {
     width: 500px;
+    height: 300px;
   }
 
   &__quoteText {
@@ -36,5 +42,15 @@
     @mixin atMedium {
       margin-bottom: 1.5rem;
     }
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: inherit;
+    justify-content: space-between;
   }
 }
